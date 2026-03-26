@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+.topic-box {
+  color: black;
+  font-size: 16px;
+  background-color: green;
+  border: 1px soild black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+}
+
+.content {
+  margin: 6% 0;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  height: 450px;
+}
+
+.receive-queue {
+  justify-content: space-between;
+}
+
+.show-queue {
+  gap: 24px;
+}
+
+.btn {
+  border: none;
+  background-color: #6495ed;
+}
+
+.btn-receive-queue {
+  width: 45%;
+  height: 90px;
+
+  color: white;
+  font-size: 32px;
+  border-radius: 12px;
+}
+
+.btn-go-to-clear-queue {
+  width: 40%;
+  height: 48px;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  border-color: unset;
+}
+
+.btn-clear-queue {
+  width: 40%;
+  height: 48px;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.btn-back {
+  width: 40%;
+  height: 32px;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.queue-no-label{
+  font-size: 18px;
+}
+
+.queue-no {
+  font-size: 60px;
+}
+
+.disabled {
+  background-color: gray !important;
+}
+
+.date {
+  font-size: 14px;
+}
