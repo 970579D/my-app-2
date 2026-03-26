@@ -1,0 +1,11 @@
+<div class="topic-box">IT 05-3</div>
+<div class="content clear-queue">
+  <button class="btn btn-clear-queue" (click)="onClear()">
+    ล้างคิว
+  </button>
+  <div class="text">หมายเลขคิวปัจจุบัน</div>
+  <div class="queue-no">{{ data?.queueLabel }}</div>
+  <button class="btn btn-back" routerLink="/">
+    กลับสู่หน้ารับบัตรคิว
+  </button>
+</div>

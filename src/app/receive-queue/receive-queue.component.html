@@ -1,0 +1,13 @@
+<div class="topic-box">IT 05-1</div>
+<div class="content receive-queue">
+  <button class="btn btn-receive-queue" routerLink="/show-queue">รับบัตรคิว</button>
+  <button
+    [ngClass]="!clearFlag ? 'disabled' : ''"
+    class="btn btn-go-to-clear-queue"
+    routerLink="/clear-queue"
+    [disabled]="!clearFlag"
+  >
+    ล้างคิว
+  </button>
+  
+</div>
