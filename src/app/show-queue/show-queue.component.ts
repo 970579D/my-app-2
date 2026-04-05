@@ -10,6 +10,6 @@ export class ShowQueueComponent implements OnInit {
   constructor(private service: Service1Service) {}
 
   ngOnInit() {
-    this.service.generateQueue().subscribe((res) => (this.data = res.data.body));
+    this.service.generateQueue().subscribe((res) => (this.data = res.data));
   }
 }

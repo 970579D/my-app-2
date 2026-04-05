@@ -13,12 +13,12 @@ export class ClearQueueComponent implements OnInit {
   constructor(private router: Router, private service: Service1Service) {}
 
   ngOnInit() {
-    this.service.findLastQueue().subscribe((res) => (this.data = res.data.body));
+    this.service.findLastQueue().subscribe((res) => (this.data = res.data));
   }
 
   onClear = () => {
     this.service.clearQueue().subscribe((res: IResponse)=>{
-      if(res.data.message == "success") this.router.navigateByUrl("/");
+      if(res.data) this.router.navigateByUrl("/");
     })
   };
 }

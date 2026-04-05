@@ -4,7 +4,6 @@ import { IResponse, Service1Service } from '../service-1.service';
 @Component({
   selector: 'app-receive-queue',
   templateUrl: './receive-queue.component.html',
-  // styleUrl: './receive-queue.component.scss'
 })
 export class ReceiveQueueComponent implements OnInit {
   clearFlag: boolean = false;
@@ -12,8 +11,8 @@ export class ReceiveQueueComponent implements OnInit {
 
   ngOnInit() {
     this.service.checkClearQueue().subscribe((res: IResponse) => {
-      this.clearFlag = res.data.body
-  });
+      this.clearFlag = res.data
+    });
   }
 
 }

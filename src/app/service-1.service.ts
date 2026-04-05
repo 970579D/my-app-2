@@ -20,21 +20,21 @@ export class Service1Service {
 
   constructor(private http: HttpClient) { }
 
-  url: string = "http://localhost:80" 
+  url: string = "http://localhost:5182/Reserve"
 
   generateQueue = (): Observable<IResponse> => {
-   return this.http.get<IResponse>(`${this.url}/generateQueue`);
+    return this.http.get<IResponse>(`${this.url}/GenerateQueue`);
   };
 
   checkClearQueue = (): Observable<IResponse> => {
-    return this.http.get<IResponse>(`${this.url}/checkExistQueue`);
+    return this.http.get<IResponse>(`${this.url}/CheckExistQueue`);
   };
 
   clearQueue = (): Observable<IResponse> => {
-    return this.http.get<IResponse>(`${this.url}/clearQueue`);
+    return this.http.get<IResponse>(`${this.url}/ClearQueue`);
   };
 
   findLastQueue = (): Observable<IResponse> => {
-    return this.http.get<IResponse>(`${this.url}/findLastQueue`);
+    return this.http.get<IResponse>(`${this.url}/FindLastQueue`);
   };
 }
