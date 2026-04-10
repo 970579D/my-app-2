@@ -1,10 +1,14 @@
 <div class="topic-box">IT 05-2</div>
-<div class="content show-queue">
+<div class="content show-queue" *ngIf="data">
   <div class="queue-no-label">หมายเลขคิว</div>
-  <div class="queue-no">{{ data?.queueLabel}}</div>
-  <div class="date">วันที่ {{data?.date | date: 'dd/mm/yyyy' }} 
-                    เวลา {{data?.date | date: 'HH:mm:ss'}}</div>
+  <div class="queue-no">{{ data.queueLabel}}</div>
+  <div class="date">วันที่ {{data.date | date: 'dd/mm/yyyy' }} 
+                    เวลา {{data.date | date: 'HH:mm:ss'}}</div>
   <button class="btn btn-back" routerLink="/">
     กลับสู่หน้ารับบัตรคิว
   </button>
+</div>
+
+<div class="loader-wrapper" *ngIf="!data">
+  <div class="loader"></div>
 </div>

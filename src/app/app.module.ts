@@ -8,14 +8,14 @@ import { CommonModule } from '@angular/common';
 import { ReceiveQueueComponent } from './receive-queue/receive-queue.component';
 import { ShowQueueComponent } from './show-queue/show-queue.component';
 import { ClearQueueComponent } from './clear-queue/clear-queue.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReceiveQueueComponent,
     ShowQueueComponent,
-    ClearQueueComponent,
+    ClearQueueComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
